@@ -1,0 +1,6 @@
+# Cloudflare Worker Environment Variables
+# Copy this file to .dev.vars (which is gitignored) and fill in your values
+
+# R2 Media Signing Secret
+# This should match the secret used in the main magicplanner app
+R2_MEDIA_SIGNING_SECRET=your-secret-key-here

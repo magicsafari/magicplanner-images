@@ -8,44 +8,46 @@
 	"main": "src/index.ts",
 	"compatibility_date": "2025-12-10",
 	"observability": {
-		"enabled": true
+		"enabled": true,
 	},
 	"r2_buckets": [
 		{
 			"binding": "R2",
-			"bucket_name": "magicplanner-staging"
-		}
+			"bucket_name": "magicplanner-staging",
+		},
 	],
 	"env": {
 		"staging": {
 			"name": "magicplanner-images-staging",
 			"routes": [
 				{
-					"pattern": "images-staging.magicsafari.app/*",
-					"zone_name": "magicsafari.app"
-				}
+					"pattern": "magicplanner-images-staging.magicsafari.app/*",
+					"zone_name": "magicsafari.app",
+				},
 			],
+			"workers_dev": true,
 			"r2_buckets": [
 				{
 					"binding": "R2",
-					"bucket_name": "magicplanner-staging"
-				}
-			]
+					"bucket_name": "magicplanner-staging",
+				},
+			],
 		},
 		"production": {
 			"name": "magicplanner-images-production",
 			"routes": [
 				{
-					"pattern": "images.magicsafari.app/*",
-					"zone_name": "magicsafari.app"
-				}
+					"pattern": "magicplanner-images-production.magicsafari.app/*",
+					"zone_name": "magicsafari.app",
+				},
 			],
+			"workers_dev": true,
 			"r2_buckets": [
 				{
 					"binding": "R2",
-					"bucket_name": "magicplanner-production"
-				}
-			]
-		}
-	}
+					"bucket_name": "magicplanner-production",
+				},
+			],
+		},
+	},
 }
